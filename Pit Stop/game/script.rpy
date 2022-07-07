@@ -1,7 +1,10 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+﻿############################################
+# Main Script
+#
+# This file is used to code the main script
+# of the game. Each scene is invoked in this
+# file to build the entire game script.
+############################################
 
 define e = Character("Eileen")
 
