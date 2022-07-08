@@ -29,7 +29,7 @@ label start:
 
     e "hopefully this works"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    e "!"
 
     # This ends the game.
 
