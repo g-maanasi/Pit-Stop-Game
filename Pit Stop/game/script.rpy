@@ -6,12 +6,15 @@
 # file to build the entire game script.
 ############################################
 
-define e = Character("Eileen")
-
-
-# The game starts here.
-
 label start:
+    define user_name = Character("[user_input]")
+    python:
+        user_input = renpy.input("Hey what's your name", length=32)
+
+        if not user_input:
+            user_input = "Monika"
+
+    user_name "It's [user_input], what's yours?"
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
