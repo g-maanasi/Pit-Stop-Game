@@ -1,9 +1,11 @@
 ﻿############################################
-# Main Script
+# Beginning Scene
 #
-# This file is used to code the main script
-# of the game. Each scene is invoked in this
-# file to build the entire game script.
+# This file is used to prompt the user to
+# input the character name, and also will
+# conduct the blind date scene at the
+# restaurant and the characters packing up
+# to go on the road trip
 ############################################
 
 label start:
