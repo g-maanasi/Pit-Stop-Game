@@ -5,7 +5,7 @@
 # input the character name, and also will
 # conduct the blind date scene at the
 # restaurant and the characters packing up
-# to go on the road trip
+# to go on the road trip.
 ############################################
 
 label start:
