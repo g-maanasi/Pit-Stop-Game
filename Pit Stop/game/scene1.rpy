@@ -27,7 +27,7 @@ label start:
             confirmation = renpy.input("Are you sure with the name [user_input] (y/n)?")
 
         if not user_input:
-            user_input = "Monika"
+            user_input = "6ix9ine"
 
     user_name "[user_input], what's yours?"
     k "My name is Kevin Yang, your blind date."
