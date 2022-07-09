@@ -21,8 +21,8 @@ label start:
         user_input = renpy.input("My name is ...", length=32)
         confirmation = renpy.input("Are you sure with the name [user_input] (y/n)?")
 
-        while confirmation != "y":
-            if confirmation == "n":
+        while confirmation.lower() != "y":
+            if confirmation.lower() == "n":
                 user_input = renpy.input("My name is ...", length=32)
             confirmation = renpy.input("Are you sure with the name [user_input] (y/n)?")
 
