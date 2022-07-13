@@ -8,13 +8,14 @@
 # to go on the road trip.
 ############################################
 
+default character_choices = []
+default user_name = Character("[user_input]", color="#ffffff")
+default k = Character("[k_name]", color="#cc3516")
+$ k_name = "?????"
+
 label start:
 
     # Character Input; background is intentionally black
-    define user_name = Character("[user_input]", color="#ffffff")
-    define k = Character("[k]", color="#cc3516")
-
-    $ k = "?????"
     k "Hey, what's your name?"
 
     python:
@@ -31,12 +32,15 @@ label start:
 
     user_name "[user_input], what's yours?"
     k "My name is Kevin Yang, your blind date."
-    $ k = "Kevin Yang"
+    $ k_name = "Kevin Yang"
 
     # Restaurant Scene
 
     # scene bg room
 
     # show eileen happy
+
+    # Getting Ready for the Road Trip
+    scene bg black # shows black background
 
     return
