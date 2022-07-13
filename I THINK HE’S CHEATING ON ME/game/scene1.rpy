@@ -143,5 +143,19 @@ label start:
     user_name "...{i}Or maybe she’s right.{/i}"
     user_name "{i}...No. He wouldn’t lie to me.{/i}"
     user_name "..."
-    user_name "{i}Jessie is never wrong though! What if he really is up to \
-    something weird? What if he’s selling drugs or something?{/i}"
+
+    # overthinking options
+    menu overthinking:
+        user_name "{i}Jessie is never wrong though! What if he really is up to \
+        something weird? What if he’s selling drugs or something?{/i}"
+
+        "Nah. You’re overthinking it.":
+            $ character_choices.append("overthinking option 1")
+            user_name "No.. that makes no sense. He wouldn’t do that. She doesn’t know him like I do."
+        "He has to be.":
+            $ character_choices.append("overthinking option 2")
+            user_name "I mean why else would he stay out so late right? He’s \
+            probably talking to all of his other clients. Not his project clients \
+            but his drug clients. Or both."
+            user_name "Maybe that’s why his snap score increases at night even \
+            when he leaves me on delivered!"
