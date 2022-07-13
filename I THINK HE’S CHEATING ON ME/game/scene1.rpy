@@ -94,8 +94,19 @@ label start:
 
         if not user_name:
             user_name = "6ix9ine"
+        redo_name = True
 
-    k "Sounds beautiful. What does it mean?"
+    menu user_input:
+        k "[user_name]?"
+
+        "Mhm!":
+            k "Sounds beautiful. What does it mean?"
+        "No, no, actually it's...":
+            $ user_name = renpy.input("No, no, actually it's...", length=32)
+            $ user_name.strip()
+            jump user_input
+
+
     $ name_meaning = renpy.input("{i}[user_name] means...{/i}")
     $ name_meaning.strip()
     k "[name_meaning] huh?"
