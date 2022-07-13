@@ -14,7 +14,7 @@ label start:
     default character_choices = []
     default user_name = Character("[user_name]", who_color="#ffffff")
     default k = Character("Kevin Yang", who_color="#cc3516")
-    define j = Character("Jessie")
+    define j = Character("Jessie", who_color="#6930b0")
 
     scene black # shows black background
     "..."
@@ -159,3 +159,44 @@ label start:
             but his drug clients. Or both."
             user_name "Maybe that’s why his snap score increases at night even \
             when he leaves me on delivered!"
+
+    # overthinking continued
+    menu overthinking_cont:
+        user_name "{i}Or what if he’s just saying he’s working all the time so \
+        he doesn’t have to talk to me?{/i}"
+
+        "You're wrong." if "overthinking option 2" in character_choices:
+            $ character_choices.append("overthinking_cont option 1.1")
+            user_name "{i}That’s stupid to think. I’m his girlfriend for god’s \
+            sake.{/i}"
+            user_name "{i}He loves me... right?{/i}"
+            "..."
+            user_name "{i}Of course he does. He tells me so everyday. This trip \
+            is just more proof of that fact.{/i}"
+
+        "You're wrong." if "overthinking option 2" not in character_choices:
+            $ character_choices.append("overthinking_cont option 1.2")
+            user_name "{i}That’s stupid to think. I’m his girlfriend for god’s \
+            sake.{/i}"
+            user_name "{i}He loves me... right?{/i}"
+            "..."
+            user_name "{i}What if he doesn’t.{/i}"
+            user_name "..."
+            user_name "I don't know... I don't know."
+            "..."
+
+        "Of course he’d avoid you.":
+            $ character_choices.append("overthinking_cont option 2")
+            user_name "{i}He’s definitely avoiding me.{/i}"
+            user_name "{i}He’s probably bored of me.{/i}"
+            user_name "{i}He’s probably talking to someone else.{/i}"
+            "..."
+
+        "What if he’s cheating on me?":
+            $ character_choices.append("overthinking_cont option 3")
+            user_name "..."
+            user_name "I don’t want to think about that."
+
+    "............................................."
+    user_name "{i}I’m done packing anyways.{/i}"
+    user_name "{i}I’ll just go to bed.{/i}"
