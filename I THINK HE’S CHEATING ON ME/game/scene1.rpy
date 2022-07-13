@@ -14,7 +14,7 @@ label start:
     default character_choices = []
     default user_name = Character("[user_input]", color="#ffffff")
     default k = Character("[k]", color="#cc3516")
-    
+
     $ k = "?????"
     k "Hey, what's your name?"
 
@@ -40,7 +40,22 @@ label start:
 
     # show eileen happy
 
-    # Getting Ready for the Road Trip
+    jump getting_ready
+
+label getting_ready:
+
     scene bg black # shows black background
 
-    return
+    user_name "..."
+    user_name "{i}God where are my pants...{/i}"
+    user_name "..."
+    user_name "{i}Or should I wear shorts...?{/i}"
+    user_name "..."
+
+    # add scene of main_character holding up her pants and shorts
+
+    user_name "{i}Well it's San Antonio so it's bound to be hot as hell...{/i}"
+    user_name "{i}But these are Kevin’s favorite pants! ♥{/i}"
+    # audio cue
+
+    # new art frame
