@@ -94,7 +94,6 @@ label start:
 
         if not user_name:
             user_name = "6ix9ine"
-        redo_name = True
 
     menu user_input:
         k "[user_name]?"
