@@ -11,7 +11,7 @@
 label start:
 
     # Character Input; background is intentionally black
-    default character_choices = []
+    $ cheating_count = 0
     default user_name = Character("[user_name]", who_color="#ffffff")
     default k = Character("Kevin Yang", who_color="#cc3516")
     define j = Character("Jessie", who_color="#6930b0")
@@ -149,10 +149,9 @@ label start:
         something weird? What if he’s selling drugs or something?{/i}"
 
         "Nah. You’re overthinking it.":
-            $ character_choices.append("overthinking option 1")
             user_name "No.. that makes no sense. He wouldn’t do that. She doesn’t know him like I do."
         "He has to be.":
-            $ character_choices.append("overthinking option 2")
+            $ cheating_count += 1
             user_name "I mean why else would he stay out so late right? He’s \
             probably talking to all of his other clients. Not his project clients \
             but his drug clients. Or both."
@@ -165,7 +164,6 @@ label start:
         he doesn’t have to talk to me?{/i}"
 
         "You're wrong." if "overthinking option 2" in character_choices:
-            $ character_choices.append("overthinking_cont option 1.1")
             user_name "{i}That’s stupid to think. I’m his girlfriend for god’s \
             sake.{/i}"
             user_name "{i}He loves me... right?{/i}"
@@ -174,7 +172,7 @@ label start:
             is just more proof of that fact.{/i}"
 
         "You're wrong." if "overthinking option 2" not in character_choices:
-            $ character_choices.append("overthinking_cont option 1.2")
+            $ cheating_count += 1
             user_name "{i}That’s stupid to think. I’m his girlfriend for god’s \
             sake.{/i}"
             user_name "{i}He loves me... right?{/i}"
@@ -185,17 +183,15 @@ label start:
             "..."
 
         "Of course he’d avoid you.":
-            $ character_choices.append("overthinking_cont option 2")
             user_name "{i}He’s definitely avoiding me.{/i}"
             user_name "{i}He’s probably bored of me.{/i}"
             user_name "{i}He’s probably talking to someone else.{/i}"
             "..."
 
-        "What if he’s cheating on me?":
-            $ character_choices.append("overthinking_cont option 3")
-            user_name "..."
-            user_name "I don’t want to think about that."
 
+    user_name "What if he’s cheating on me?"
+    user_name "..."
+    user_name "I don’t want to think about that."
     "............................................."
     user_name "{i}I’m done packing anyways.{/i}"
     user_name "{i}I’ll just go to bed.{/i}"
