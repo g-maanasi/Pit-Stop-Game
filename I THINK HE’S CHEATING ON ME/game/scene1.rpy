@@ -4,8 +4,9 @@
 # This file is used to prompt the user to
 # input the character name, and also will
 # conduct the blind date scene at the
-# restaurant and the characters packing up
-# to go on the road trip.
+# restaurant. Some of the options the player
+# will choice might affect the the future
+# choices that'll show up in the future.
 ############################################
 
 label start:
