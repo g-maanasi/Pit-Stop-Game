@@ -195,3 +195,22 @@ label start:
     "............................................."
     user_name "{i}I’m done packing anyways.{/i}"
     user_name "{i}I’ll just go to bed.{/i}"
+
+    scene black
+    user_name "{i}Ahh! I'm so tired{/i}"
+    user_name "{i}Need to check my phone though.{/i}"
+    # new art frame (phone scene)
+    user_name "{i}Kevin!!!♥♥♥{/i}"
+
+    # texting Kevin
+    menu texting_options:
+        user_name "{i}EEE What should I tell him!{/i}"
+        "I love you!":
+            # scene bg
+        "Sounds good!":
+            # scene bg
+
+    user_name "{i}Huh. He said “gn” instead of “goodnight”.{/i}"
+    user_name "{i}I don’t like that...is he mad? At me?{/i}"
+    user_name "{i}Okay, I'm seriously overreacting. I’m sleeping.{/i}"
+    scene black
