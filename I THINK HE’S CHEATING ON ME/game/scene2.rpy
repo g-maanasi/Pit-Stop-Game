@@ -9,6 +9,9 @@
 
 label diner:
 
+    ###########
+    # Packing #
+    ###########
     scene black
     user_name "{i}ugh...I’m too tired for this.{/i}"
 
@@ -26,7 +29,7 @@ label diner:
     menu packing:
         user_name "{i}Looks like I have room for one more thing. Should I take anything else?{/i}"
 
-        "Journal" if cheating_count > 0:
+        "Journal":
             $ pen = True
             user_name "{i}I'll bring this just in case I get bored during the car ride...\
             better bring a pen too, can't forget that.{/i}"
@@ -43,3 +46,7 @@ label diner:
     k "You all set [user_name]?"
     user_name "Mhmm! Goodbye Jessie! See you in 3 days!"
     j "Bye Love! Be careful now!"
+
+    ################
+    # Dining Scene #
+    ################
