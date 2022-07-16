@@ -30,14 +30,14 @@ label diner:
         user_name "{i}Looks like I have room for one more thing. Should I take anything else?{/i}"
 
         "Journal":
-            $ pen = True
+            $ choices["packing"] = "pen"
             user_name "{i}I'll bring this just in case I get bored during the car ride...\
             better bring a pen too, can't forget that.{/i}"
         "Sanitary Pads":
-            $ pads = True
+            $ choices["packing"] = "pads"
             user_name "{i}I'll bring this in case I have an emergency{/i}"
         "Candy":
-            $ candyCane = True
+            $ choices["packing"] = "candy"
             user_name "{i}Ohh I need some snacks for the trip!{/i}"
 
     scene black
