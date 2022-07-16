@@ -5,8 +5,8 @@
 # input the character name, and also will
 # conduct the blind date scene at the
 # restaurant. Some of the options the player
-# will choice might affect the the
-# choices that'll show up in the future.
+# will choice might affect the choices
+# that'll show up in the future.
 ############################################
 
 label start:
