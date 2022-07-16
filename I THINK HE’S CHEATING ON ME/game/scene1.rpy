@@ -1,5 +1,5 @@
 ﻿############################################
-# Beginning Scene
+# Beginning Scene [Exposition]
 #
 # This file is used to prompt the user to
 # input the character name, and also will
