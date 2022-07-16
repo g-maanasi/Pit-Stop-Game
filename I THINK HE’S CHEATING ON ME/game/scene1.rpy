@@ -215,3 +215,5 @@ label start:
     user_name "{i}I don’t like that...is he mad? At me?{/i}"
     user_name "{i}Okay, I'm seriously overreacting. I’m sleeping.{/i}"
     scene black
+
+    jump diner
