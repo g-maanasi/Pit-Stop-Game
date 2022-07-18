@@ -12,7 +12,6 @@
 label start:
 
     # Character Input; background is intentionally black
-    $ choices = {}
     default user_name = Character("[user_name]", who_color="#ffffff")
     default k = Character("Kevin Yang", who_color="#cc3516")
     define j = Character("Jessie", who_color="#6930b0")
@@ -152,7 +151,6 @@ label start:
         "Nah. You’re overthinking it.":
             user_name "No.. that makes no sense. He wouldn’t do that. She doesn’t know him like I do."
         "He has to be.":
-            $ choices["cheating"] = 1
             user_name "I mean why else would he stay out so late right? He’s \
             probably talking to all of his other clients. Not his project clients \
             but his drug clients. Or both."
@@ -173,7 +171,6 @@ label start:
             is just more proof of that fact.{/i}"
 
         "You're wrong." if "overthinking option 2" not in character_choices:
-            $ choices["cheating"] += 1
             user_name "{i}That’s stupid to think. I’m his girlfriend for god’s \
             sake.{/i}"
             user_name "{i}He loves me... right?{/i}"
