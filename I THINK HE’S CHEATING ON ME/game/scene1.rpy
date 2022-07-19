@@ -12,19 +12,20 @@
 label start:
 
     # Character Input; background is intentionally black
+    $ character_choices = []
     default user_name = Character("[user_name]", who_color="#ffffff")
     default k = Character("Kevin Yang", who_color="#cc3516")
     define j = Character("Jessie", who_color="#6930b0")
 
     scene black # shows black background
     "..."
-    "{i}God where are my pants...{/i}"
+    "{i}God, where is my pink beanie...{/i}"
+    "{i}Or should I wear my black one...?{/i}"
     "..."
-    "{i}Or should I wear shorts...?{/i}"
-    "..."
+    "{i}Found them!{/i}"
     # add scene of main_character holding up her pants and shorts
-    "{i}Well it's San Antonio so it's bound to be hot as hell...{/i}"
-    "{i}But these are Kevin’s favorite pants! ♥{/i}"
+    "{i}Well, pink is my favorite color.. so I should probably go with that...{/i}"
+    "{i}But black is Kevin’s favorite!  ♥{/i}"
 
     # audio cue
     # new art frame (new scene)
@@ -35,42 +36,43 @@ label start:
     "Oh hey Jessie!"
     # new art frame (new scene)
     j "Hey love. Whatcha up to?"
-    "Just packin’ for tomorrow! Can’t decide what pants to bring though."
+    "Just packin’ for tomorrow! Can’t decide what beanie to bring though."
     j "Hm? What do you mean?"
     # new art frame (new scene)
-    "Well.. it’s gonna be hot as balls outside so I should definitely \
-    wear shorts or else i’m probably gonna eventually get sick but like I don’t \
-    want my thighs to chafe and I know Kevin really loves these pants and I want \
-    to make sure he’s extra happy so maybe if I wear the pants it’ll be a better choice."
-    "But at the same time I should be more focused on my own comfort \
-    or else I may act uncomfortable and that’ll probably be even worse than \
-    wearing the pants. But at the same time—"
+    "Well you see...pink is my favorite color, so the obvious choice would be\
+    to bring my pink beanie. Plus it has this super cute yā kitty patch on the\
+    bottom that would go with almost all of the outfits that I have planned."
+    "But you know on the other hand, Kevin loves the color black. But I don't \
+    think the black one is as cute. I mean it has nothing on it other than the \
+    Mike logo and i'm not even a huge fan of mike. I like adid--"
     # new art frame (new scene)
-    j "Girl. Please for the love of god stop overthinking it."
+    j "Girl, Please. No way you’re gonna let your boyfriend stop you from bringing your favorite beanie of all things."
     j "Who cares what Kevin thinks!"
     "{b}I{/b} do! I want to look good for him!"
     j "..."
-    j "Just take the shorts. You said it yourself. It’s definitely going to be \
-    at least 100 degrees out there. And it will probably feel like 150…"
-    "..."
-    j "Here’s an idea, take both. You can decide for yourself when you get there. \
-    Better yet Kevin can help you choose if you so please."
+    j "I think you should take the pink one. You said it yourself. It’s {b}your{/b} favorite one."
+    "But..."
+    j "Here’s an idea, take both. You can decide for yourself when you get there.\
+    It shouldn’t take up any luggage space and better yet Kevin can help you choose if you so please."
     "Oh yeah. That’s actually a good idea. {i}Why didn’t I just think of that...{/i}"
 
     # new art frame (new scene)
     j "Anyway, where are you guys going again?"
-    "I forget the name but it’s some resort in San Antonio!"
+    "I forgot the name, but it's some ski resort in Aspen!"
+    j "Oh man, that’s like a 3 hour drive from here."
+    "Yep!"
     # new art frame (new scene)
-    "EEEE I’m so excited Jessie!!! I haven’t gotten to spend time with \
-    Kevin like this in so long because of his job."
+    "EEEE I’m honestly so excited Jessie!!! I haven’t gotten to spend time with \
+    Kevin like this in so long because of his job. It’s so time consuming and he’s been so tired lately"
     j "Or so he says."
     # new art frame (new scene)
     "What is that supposed to mean?"
-    j "I don’t know love. Do you know anyone else around town who works until \
-    1 am everyday including the damn weekends?"
-    j "Not to mention he flakes on you last minute and barely answers your texts anymore."
-    "Well he is some software-engineer-programmer guy. He’s probably just coding some huge project."
-    j "Something still feels off."
+    j "I don’t know love. Do you really think he’s that busy doing work? Like\
+    do you know anyone else that works until 1 am everyday at the office including\
+    the damn weekends?"
+    j "Not to mention he has been flaking on you last minute lately and barely answers your texts anymore"
+    "Well he is a whole software engineer. Seems like some intense position. He’s probably just coding some huge project!"
+    j "Something still feels off. Like he could definitely be doing something else..."
     "...He’s just a hard worker."
     j "Okay, okay, fine. Sorry. I didn’t mean to make assumptions. I just want \
     to make sure that he’s not messing with you or something."
@@ -136,11 +138,11 @@ label start:
     j "Goodnight."
 
     user_name "..."
-    user_name "{i}What the hell is her deal? She hasn’t even met him yet and \
-    she’s acting like he’s a bitch or something.{/i}"
-    user_name "{i}She’s really the bitch here.{/i}"
-    user_name "...{i}Or maybe she’s right.{/i}"
-    user_name "{i}...No. He wouldn’t lie to me.{/i}"
+    user_name "{i}Man, what’s her deal? She hasn’t even properly met him yet and\
+    she’s acting like he’s some weird sneaky b-word.{/i}"
+    user_name "{i}She’s the weird sneaky b-word here!{/i}"
+    user_name "...{i}Or maybe she’s right. What if he is doing something weird?{/i}"
+    user_name "{i}...Nah, he wouldn’t lie to me.{/i}"
     user_name "..."
 
     # overthinking options
@@ -151,6 +153,7 @@ label start:
         "Nah. You’re overthinking it.":
             user_name "No.. that makes no sense. He wouldn’t do that. She doesn’t know him like I do."
         "He has to be.":
+            $ character_choices.append("overthinking option 2")
             user_name "I mean why else would he stay out so late right? He’s \
             probably talking to all of his other clients. Not his project clients \
             but his drug clients. Or both."
@@ -209,7 +212,7 @@ label start:
             # scene bg
 
     user_name "{i}Huh. He said “gn” instead of “goodnight”.{/i}"
-    user_name "{i}I don’t like that...is he mad? At me?{/i}"
+    user_name "{i}Is he mad about something? What if he’s mad at me???{/i}"
     user_name "{i}Okay, I'm seriously overreacting. I’m sleeping.{/i}"
     scene black
 
