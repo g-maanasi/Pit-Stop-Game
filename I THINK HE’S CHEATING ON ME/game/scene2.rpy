@@ -94,7 +94,6 @@ label car_ride1:
             jump pondering1_route
         "You're always late!":
             # Pondering #2 Route
-            $ character_choices.append("You're always late!")
             user_name "{i}No. He needs to hear how I feel.{/i}"
             user_name "You weren’t a teensy bit late! And anyway I’m not only\
             talking about this time. You haven’t properly spoken to me in what\
@@ -103,6 +102,7 @@ label car_ride1:
             and sometimes you cancel last minute when we make plans. "
             user_name "...It feels like you aren’t even there anymore."
             user_name "Like who knows what you’re {b}actually{/b} doing!"
+            jump pondering2_route
 
 label pondering1_route:
     k "...You do?"
@@ -128,3 +128,31 @@ label pondering1_route:
     user_name "..."
     user_name "{i}Ah, I’m so tired. I honestly didn’t get much sleep last night either.\
     Doesn’t hurt to take a lil nap.{/i}"
+
+label pondering2_route:
+    k "Okay I know, I know! I’m sorry! That’s why I’m taking you on this damn\
+    trip in the first place!"
+    user_name "..."
+    k "You really don’t seem to understand, [user_name]! I’ve been working so fucking much!"
+    k "All day and all night I've been on this damn project! Three god damn\
+    weekends in a row I’ve had to talk to my client for hours and hours"
+    k "Unlike you I have a really difficult job and I absolutely do not have time\
+    to be sitting around."
+    k "And what exactly are you suggesting here? You know EXACTLY what I’m doing, [user_name]"
+    user_name "I..."
+    user_name "{i}He’s never been so defensive with me.{/i}"
+    user_name "{i}I feel bad. I feel so bad.{/i}"
+    user_name "{i}I don’t want to talk anymore.{/i}"
+    user_name "{i}What's wrong with me...{/i}"
+    user_name "I'm sorry."
+    user_name "I didn’t mean it like that. I’m sorry."
+    k "..."
+    k "It’s okay, baby. I didn’t mean to lash out at you either."
+    k "Let’s just take it easy, okay?"
+    user_name "..."
+    k "..."
+    user_name "{i}I don’t like this.{/i}"
+    user_name "{i}There’s too much tension.{/i}"
+    user_name "{i}I hate this.{/i}"
+    user_name "{i}I just want this to go away.{/i}"
+    user_name "{i}I’ll just sleep. Maybe when I wake up things will be better.{/i}"
