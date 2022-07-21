@@ -216,4 +216,4 @@ label start:
     user_name "{i}Okay, I'm seriously overreacting. I’m sleeping.{/i}"
     scene black
 
-    jump diner
+    jump car_ride1
