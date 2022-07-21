@@ -7,7 +7,7 @@
 # potentially affect their final outcome.
 ############################################
 
-label diner:
+label car_ride1:
 
     ##########
     # Part 1 #
@@ -86,4 +86,45 @@ label diner:
     menu pondering:
         user_name "{i}I don’t know how to feel.{/i}"
 
-        
+        "It's okay.":
+            # Pondering #1 Route
+            user_name "{i}I guess it’s okay. He said it himself, he was just busy\
+            with work. Plus he’s apologizing!{/i}"
+            user_name "It’s okay, Kevvie. I understand."
+            jump pondering1_route
+        "You're always late!":
+            # Pondering #2 Route
+            $ character_choices.append("You're always late!")
+            user_name "{i}No. He needs to hear how I feel.{/i}"
+            user_name "You weren’t a teensy bit late! And anyway I’m not only\
+            talking about this time. You haven’t properly spoken to me in what\
+            feels like forever."
+            user_name "You barely return my calls, you’re so dry when you text me,\
+            and sometimes you cancel last minute when we make plans. "
+            user_name "...It feels like you aren’t even there anymore."
+            user_name "Like who knows what you’re {b}actually{/b} doing!"
+
+label pondering1_route:
+    k "...You do?"
+    user_name "Of course! I’m sorry. I’ve just missed you a lot."
+    user_name "But I gotta remember you’re just working really hard."
+    k "It’s okay, baby. Basically, I’ve got this huge project that I’ve had to\
+    make from scratch for an incredibly important client, and they got me working overtime."
+    k "Don’t worry, though. I’m just about done with it."
+    user_name "{i}Take that, Jessie! I knew that he had some project.{/i}"
+    user_name "{i}I really thought he was a darn drug dealer...{/i}"
+    user_name "I’m guessing that’s why you stayed up last night? To finish it up?"
+    k "...hm? What?"
+    user_name "You said earlier that you stayed up all night. Was it because of this project?"
+    k "..."
+    k "Oh yeah! Yeah, I was working on it. Sorry, my mind is in such a doozy I\
+    didn’t understand what you were saying."
+    user_name "{i}That was weird. What is there not to understand?{/i}"
+    user_name "{i}Whatever. I just want things to go back to the way it was.{/i}"
+    user_name "Does that mean that you’ll be free soon?"
+    k "Damn right! Then you'll be {b}all mine{/b}, baby."
+    user_name "Hehe! ♥"
+    k "..."
+    user_name "..."
+    user_name "{i}Ah, I’m so tired. I honestly didn’t get much sleep last night either.\
+    Doesn’t hurt to take a lil nap.{/i}"
