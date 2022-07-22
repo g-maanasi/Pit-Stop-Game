@@ -94,6 +94,7 @@ label car_ride1:
             jump pondering1_route
         "You're always late!":
             # Pondering #2 Route
+            $ character_choices.append("confrontational")
             user_name "{i}No. He needs to hear how I feel.{/i}"
             user_name "You weren’t a teensy bit late! And anyway I’m not only\
             talking about this time. You haven’t properly spoken to me in what\
@@ -129,6 +130,8 @@ label pondering1_route:
     user_name "{i}Ah, I’m so tired. I honestly didn’t get much sleep last night either.\
     Doesn’t hurt to take a lil nap.{/i}"
 
+    jump diner
+
 label pondering2_route:
     k "Okay I know, I know! I’m sorry! That’s why I’m taking you on this damn\
     trip in the first place!"
@@ -156,3 +159,93 @@ label pondering2_route:
     user_name "{i}I hate this.{/i}"
     user_name "{i}I just want this to go away.{/i}"
     user_name "{i}I’ll just sleep. Maybe when I wake up things will be better.{/i}"
+
+    jump diner
+
+label diner:
+    scene black
+
+    # art frame
+    user_name "{i}Mmm...{/i}"
+    user_name "{i}That was a nice dream...{/i}"
+    user_name "..."
+    user_name "{i}Where's Kevin?{/i}"
+
+    # art frame
+    user_name "{i}Where even are we?{/i}"
+    # art frame
+    user_name "{i}...oh{/i}"
+    user_name "{i}I think I'll just wait for him.{/i}"
+    # art frame
+    user_name "{i}Hm...?{/i}"
+    user_name "{i}Huh. He left his phone here.{/i}"
+    user_name "{i}Hehe, I'm gonna clog up his camera roll!{/i}"
+
+    # art frame
+    user_name "..."
+    user_name "{i}Lots of calls and texts.{/i}"
+    user_name "{i}...Looks like someone's popular.{/i}"
+    user_name "{i}Wonder who they are.{/i}"
+
+    default phone_choices = []
+    menu phone:
+        set phone_choices
+
+        "Let's check the calls.":
+            # art frame
+            user_name "{i}What kind of client needs to spam call 12 times.{/i}"
+            user_name "{i}He did say that they were “important”.{/i}"
+            user_name "{i}Interesting. The latest calls were two days ago.{/i}"
+            jump phone
+        "Let's check the messages."
+            # art frame
+            user_name "{i}Wonder what these 43 messages are.{/i}"
+            user_name "{i}Client?{/i}"
+            user_name "{i}...I’m gonna scroll up a bit too.{/i}"
+            # phone pov
+            "..."
+            user_name "{i}Kayla, huh.{/i}"
+            user_name "{i}Why doesn’t he just use her actual name instead of “client”.{/i}"
+            jump phone
+
+    user_name "{i}Is {b}she{/b} what he has been doing for weeks?{/i}"
+
+    menu:
+        "You're overreacting.":
+            user_name "{i}No. That’s actually ridiculous. I need to stop overreacting.{/i}"
+            user_name "{i}This is all driving me insane.{/i}"
+            user_name "{i}But what about the missed messages and calls?{/i}"
+
+        "Why else would he hide her name?":
+            user_name "{i}Why else would he change her name?{/i}"
+            user_name "{i}Why was she trying to tell him?{/i}"
+            user_name "{i}Why were there so many missed calls?{/i}"
+            user_name "{i}What is he hiding?{/i}"
+            user_name "{i}This is driving me insane.{/i}"
+
+    menu:
+        "There has to be something going on.":
+            user_name "{i}I don’t know why...{/i}"
+            user_name "{i}It just doesn’t feel right.{/i}"
+            user_name "{i}Something isn’t right.{/i}"
+
+    user_name "..."
+    user_name "{i}Frick!{/i}"
+    user_name "{i}Kevin is coming back.{/i}"
+    # og car pov
+    user_name "...Hi Kevvie!!"
+    k "Hey, baby! I see that you're finally up!"
+    k "Sorry you were probably confused when you woke up. I just went to the bathroom."
+    k "Andddd I brought you this!"
+    # holding milkshake
+    user_name "Um... Thank you so much!!"
+    k "Mhm!"
+    k "Ah, so that’s where my phone went too! Thought I lost that thing."
+    k "Okay, on we go!"
+    user_name "..."
+    k "Everything okay? You seem a little shaken up. Haha, get it? Shaken up!"
+    user_name "Haha... yeah! I just woke up so I'm just a little disoriented is all!"
+    k "Aw, okay! Hopefully the shake will sweeten up your mood! Haha!"
+    user_name "Yeah..."
+
+    
