@@ -248,4 +248,4 @@ label diner:
     k "Aw, okay! Hopefully the shake will sweeten up your mood! Haha!"
     user_name "Yeah..."
 
-    
+    jump car_ride2
