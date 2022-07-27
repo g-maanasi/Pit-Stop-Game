@@ -40,7 +40,7 @@ label car_ride1:
             $ character_choices.append("Journal")
         "Polaroid":
             user_name "{i}Okay... polaroid it is!{/i}"
-            $ character_choices.append("Polariod")
+            $ character_choices.append("Polaroid")
         "Bag of Candy":
             user_name "{i}Okay... candy it is!{/i}"
             $ character_choices.append("Candy")
