@@ -42,8 +42,8 @@ label start:
     "Well you see...pink is my favorite color, so the obvious choice would be\
     to bring my pink beanie. Plus it has this super cute yā kitty patch on the\
     bottom that would go with almost all of the outfits that I have planned."
-    "But you know on the other hand, Kevin loves the color black. But I don't \
-    think the black one is as cute. I mean it has nothing on it other than the \
+    "But you know on the other hand, Kevin loves the color black. But I don't\
+    think the black one is as cute. I mean it has nothing on it other than the\
     Mike logo and i'm not even a huge fan of mike. I like adid--"
     # new art frame (new scene)
     j "Girl, Please. No way you’re gonna let your boyfriend stop you from bringing your favorite beanie of all things."
@@ -62,7 +62,7 @@ label start:
     j "Oh man, that’s like a 3 hour drive from here."
     "Yep!"
     # new art frame (new scene)
-    "EEEE I’m honestly so excited Jessie!!! I haven’t gotten to spend time with \
+    "EEEE I’m honestly so excited Jessie!!! I haven’t gotten to spend time with\
     Kevin like this in so long because of his job. It’s so time consuming and he’s been so tired lately"
     j "Or so he says."
     # new art frame (new scene)
@@ -74,15 +74,15 @@ label start:
     "Well he is a whole software engineer. Seems like some intense position. He’s probably just coding some huge project!"
     j "Something still feels off. Like he could definitely be doing something else..."
     "...He’s just a hard worker."
-    j "Okay, okay, fine. Sorry. I didn’t mean to make assumptions. I just want \
+    j "Okay, okay, fine. Sorry. I didn’t mean to make assumptions. I just want\
     to make sure that he’s not messing with you or something."
     "Hey. He’s so much better than you think, you know? It’s only been like this for a couple weeks."
     j "..."
-    "I know it’s a little weird that he’s kinda off the grid right now. \
+    "I know it’s a little weird that he’s kinda off the grid right now.\
     But I know he would never lie to me."
 
     # new art frame (new scene) [first date]
-    "{i}Kevin... It has only been around 3 months, but he’s genuinely \
+    "{i}Kevin... It has only been around 3 months, but he’s genuinely\
     one of the sweetest people I have ever met.{/i}"
     "...and funny too"
     # new art frame (new scene) [first date]
@@ -147,34 +147,34 @@ label start:
 
     # overthinking options
     menu overthinking:
-        user_name "{i}Jessie is never wrong though! What if he really is up to \
+        user_name "{i}Jessie is never wrong though! What if he really is up to\
         something weird? What if he’s selling drugs or something?{/i}"
 
         "Nah. You’re overthinking it.":
             user_name "No.. that makes no sense. He wouldn’t do that. She doesn’t know him like I do."
         "He has to be.":
             $ character_choices.append("overthinking option 2")
-            user_name "I mean why else would he stay out so late right? He’s \
-            probably talking to all of his other clients. Not his project clients \
+            user_name "I mean why else would he stay out so late right? He’s\
+            probably talking to all of his other clients. Not his project clients\
             but his drug clients. Or both."
-            user_name "Maybe that’s why his snap score increases at night even \
+            user_name "Maybe that’s why his snap score increases at night even\
             when he leaves me on delivered!"
 
     # overthinking continued
     menu overthinking_cont:
-        user_name "{i}Or what if he’s just saying he’s working all the time so \
+        user_name "{i}Or what if he’s just saying he’s working all the time so\
         he doesn’t have to talk to me?{/i}"
 
         "You're wrong." if "overthinking option 2" in character_choices:
-            user_name "{i}That’s stupid to think. I’m his girlfriend for god’s \
+            user_name "{i}That’s stupid to think. I’m his girlfriend for god’s\
             sake.{/i}"
             user_name "{i}He loves me... right?{/i}"
             "..."
-            user_name "{i}Of course he does. He tells me so everyday. This trip \
+            user_name "{i}Of course he does. He tells me so everyday. This trip\
             is just more proof of that fact.{/i}"
 
         "You're wrong." if "overthinking option 2" not in character_choices:
-            user_name "{i}That’s stupid to think. I’m his girlfriend for god’s \
+            user_name "{i}That’s stupid to think. I’m his girlfriend for god’s\
             sake.{/i}"
             user_name "{i}He loves me... right?{/i}"
             "..."
@@ -208,8 +208,10 @@ label start:
         user_name "{i}EEE What should I tell him!{/i}"
         "I love you!":
             # scene bg
+            k "ok"
         "Sounds good!":
             # scene bg
+            k  "ok"
 
     user_name "{i}Huh. He said “gn” instead of “goodnight”.{/i}"
     user_name "{i}Is he mad about something? What if he’s mad at me???{/i}"
