@@ -103,7 +103,7 @@ label car_ride2:
 
     user_name "Let’s talk about something else"
 
-    if "Confrontational" in character_choices | | "Confrontational 2" in character_choices:
+    if "Confrontational" in character_choices || "Confrontational 2" in character_choices:
         k "Then please stop accusing me of things, okay?"
         user_name "Okay."
         k "..."
@@ -209,18 +209,20 @@ label ducees:
 
     user_name "{i}I guess I’ll just stare at these{/i}"
 
-    default board_choices = []
-    menu:
-         set board_choices
+    $ check_promotion_ad = False
+    $ check_ads = False
 
-        "Examine the resort promotion.":
+    menu corkboard:
+        "Examine the resort promotion." if check_promotion_ad == False:
             user_name "{i}Hey, that’s where we are going!{/i}"
             user_name "{i}Wait... opening next year?{/i}"
             user_name "{i}This is probably wrong.{/i}"
-
-        "Examine the advertisements.":
+            $ check_promotion_ad = True
+            jump corkboard
+        "Examine the advertisements." if check_ads == False:
             user_name "{i}Boring.{/i}"
-
+            $ check_ads = True
+            jump corkboard
         "Examine the missing posters.":
             # ART_FRAME: Zooms in on MC’s face. She has a terrified look on her face.
 
