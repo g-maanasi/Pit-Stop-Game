@@ -268,11 +268,10 @@ label diner:
     user_name "{i}...Looks like someone’s popular.{/i}"
     user_name "{i}Wonder who they are.{/i}"
 
-    default phone_choices = []
-    menu:
-        set phone_choices
-
-        "Let’s check the calls.":
+    $ check_calls = False
+    $ check_msgs = False
+    menu phone:
+        "Let’s check the calls." if check_calls == False:
             # ART_FRAME: Kevin's phone POV. on the phone app. There are missed calls
             # from Client on two separate days coming to a total of 12 missed calls.
             # 3 missed calls the first day. Kevin picked up once. The next day the
@@ -281,8 +280,10 @@ label diner:
             user_name "{i}What kind of client needs to spam call 12 times...{/i}"
             user_name "{i}He did say that they were “important”{/i}"
             user_name "{i}Interesting. The latest calls were two days ago.{/i}"
+            $ check_calls = True
+            jump phone
 
-        "Let’s check the messages.":
+        "Let’s check the messages." if check_msgs == False:
 
             user_name "{i}Wonder who sent these 43 messages...{/i}"
 
@@ -296,6 +297,8 @@ label diner:
             user_name "{i}Kayla, huh.{/i}"
             user_name "{i}Why doesn’t he just use her actual name instead of “client”.{/i}"
             user_name "..."
+            $ check_msgs = True
+            jump phone
 
     user_name "{i}Is {b}she{/b} what he has been doing for weeks?{/i}"
 
