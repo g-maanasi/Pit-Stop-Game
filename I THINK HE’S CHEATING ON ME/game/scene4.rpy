@@ -43,7 +43,10 @@ label gas_station:
     user_name "{i}I don't see him by the gas pump.{/i}"
     user_name "Now is my chance to escape."
 
+    default user_choice = []
     menu:
+        set user_choice
+
         "Unlock the car door":
             user_name "{i}It’s locked. Heh. That would’ve been too easy.{/i}"
 

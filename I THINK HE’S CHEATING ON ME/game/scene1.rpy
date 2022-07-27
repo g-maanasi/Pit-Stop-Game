@@ -208,10 +208,10 @@ label start:
         user_name "{i}EEE What should I tell him!{/i}"
         "I love you!":
             # scene bg
-            k "ok"
+            ""
         "Sounds good!":
             # scene bg
-            k  "ok"
+            ""
 
     user_name "{i}Huh. He said “gn” instead of “goodnight”.{/i}"
     user_name "{i}Is he mad about something? What if he’s mad at me???{/i}"

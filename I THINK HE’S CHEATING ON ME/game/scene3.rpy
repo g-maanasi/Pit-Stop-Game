@@ -103,7 +103,7 @@ label car_ride2:
 
     user_name "Let’s talk about something else"
 
-    if "Confrontational" in character_choices || "Confrontational 2" in character_choices:
+    if "Confrontational" in character_choices | | "Confrontational 2" in character_choices:
         k "Then please stop accusing me of things, okay?"
         user_name "Okay."
         k "..."
@@ -226,6 +226,7 @@ label ducees:
 
             user_name "..."
 
+
     # ART_FRAME: Zooms in on the missing poster in the center. It is Kayla.
 
     user_name "{i}It can’t be.{/i}"
@@ -271,11 +272,13 @@ label ducees:
                 "YOU NEED TO LEAVE NOW":
                     menu:
                         "WHERE DO I GO":
-                            "ESCAPE NOW":
-                                k "Is everything okay, [user_name]?
+                            menu:
+                                "ESCAPE NOW":
+                                    k "Is everything okay, [user_name]?"
                         "WHERE DO I GO":
-                            "ESCAPE NOW":
-                                k "Is everything okay, [user_name]?"
+                            menu:
+                                "ESCAPE NOW":
+                                    k "Is everything okay, [user_name]?"
 
         "EVERYTHING WILL BE OKAY":
             menu:
@@ -284,32 +287,32 @@ label ducees:
                         "YOU NEED TO LEAVE":
                             menu:
                                 "YOU’RE OVERTHINKING":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
                                 "ESCAPE NOW":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
 
                         "YOU NEED TO LEAVE":
                             menu:
                                 "YOU’RE OVERTHINKING":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
                                 "ESCAPE NOW":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
 
                 "EVERYTHING WILL BE OKAY":
                     menu:
                         "YOU NEED TO LEAVE":
                             menu:
                                 "YOU’RE OVERTHINKING":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
                                 "ESCAPE NOW":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
 
                         "YOU NEED TO LEAVE":
                             menu:
                                 "YOU’RE OVERTHINKING":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
                                 "ESCAPE NOW":
-                                    k "Is everything okay, [user_name]?
+                                    k "Is everything okay, [user_name]?"
 
     k "I came to find you because you were taking a while."
     user_name "..."
@@ -491,4 +494,4 @@ label patience:
     # ART_FRAME: shot of kevin. His hand is still extended to the MC’s thigh.
     # He has an ominous look on his face.
 
-    jump car_ride3
+    jump gas_station
