@@ -1,5 +1,0 @@
-Please don't add a ReadMe.md file until after the game is done.
-
-
-
-it breaks Atom on my laptop :pensive:
