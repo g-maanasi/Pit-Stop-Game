@@ -29,28 +29,39 @@ label start:
 
     # audio cue
     # new art frame (new scene)
+
     "Hm?"
+
     # new art frame (new scene)
     # new art frame (new scene)
     # new art frame (new scene)
+
     "Oh hey Jessie!"
+
     # new art frame (new scene)
+
     j "Hey love. Whatcha up to?"
     "Just packin’ for tomorrow! Can’t decide what beanie to bring though."
     j "Hm? What do you mean?"
+
     # new art frame (new scene)
+
     "Well you see...pink is my favorite color, so the obvious choice would be\
     to bring my pink beanie. Plus it has this super cute yā kitty patch on the\
     bottom that would go with almost all of the outfits that I have planned."
     "But you know on the other hand, Kevin loves the color black. But I don't\
     think the black one is as cute. I mean it has nothing on it other than the\
-    Mike logo and i'm not even a huge fan of mike. I like adid--"
+    Mike logo and i'm not even a huge fan of mike. I like Adid--"
+
     # new art frame (new scene)
-    j "Girl, Please. No way you’re gonna let your boyfriend stop you from bringing your favorite beanie of all things."
+    
+    j "Girl, Please. No way you’re gonna let your boyfriend stop you from\
+    bringing your favorite beanie of all things."
     j "Who cares what Kevin thinks!"
     "{b}I{/b} do! I want to look good for him!"
     j "..."
-    j "I think you should take the pink one. You said it yourself. It’s {b}your{/b} favorite one."
+    j "I think you should take the pink one. You said it yourself. It’s\
+    {b}your{/b} favorite one."
     "But..."
     j "Here’s an idea, take both. You can decide for yourself when you get there.\
     It shouldn’t take up any luggage space and better yet Kevin can help you choose if you so please."
