@@ -103,7 +103,7 @@ label car_ride2:
 
     user_name "Let’s talk about something else"
 
-    if "Confrontational" in character_choices || "Confrontational 2" in character_choices:
+    if "Confrontational" in character_choices or "Confrontational 2" in character_choices:
         k "Then please stop accusing me of things, okay?"
         user_name "Okay."
         k "..."
